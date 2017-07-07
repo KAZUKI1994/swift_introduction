@@ -10,10 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func tapHandler(_ sender: Any) {
+        myTextField.text = "変更しました。";
+    }
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
+    @IBAction func tapCopyBtn(_ sender: Any) {
+        let board = UIPasteboard.general
+        board.string = "Hello World"
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
